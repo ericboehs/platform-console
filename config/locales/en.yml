@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  nav:
+    link: Link
+    get_started: Get Started

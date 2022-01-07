@@ -11,7 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
   </head>
 
-  <body class="uk-container uk-container-small">
+  <body class="<%= body_class %>">
+    <%= render 'shared/navbar' %>
+
     <%= yield %>
   </body>
 </html>
