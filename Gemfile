@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
 ruby '~> 3.1.0'
 
 gem 'rails', '~> 7.0.1'
 
-gem 'bootsnap', require: false  # Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', require: false # Reduces boot times through caching; required in config/boot.rb
 gem 'pg',   '~> 1.1' # Use postgresql as the database for Active Record
 gem 'puma', '~> 5.0' # Use the Puma web server [https://github.com/puma/puma]
 
@@ -17,6 +19,8 @@ gem 'turbo-rails',     '~> 1.0' # Hotwire's SPA-like page accelerator [https://t
 group :development, :test do
   gem 'pry-awesome_print' # Auto AP in pry
   gem 'pry-rails'         # Adds pry, an interactive REPL debugger; Try show-models
+  gem 'rubocop'           # Ruby Style Guide Analyzer
+  gem 'rubocop-rails'     # Add Rails specific cops to RuboCop
 end
 
 group :development do
