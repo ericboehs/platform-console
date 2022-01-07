@@ -32,5 +32,10 @@
 en:
   hello: "Hello world"
   nav:
-    link: Link
+    drop:
+     account: Account
+     log_out: Log Out
+     messages: Messages
     get_started: Get Started
+    link: Link
+    log_in: Log In
