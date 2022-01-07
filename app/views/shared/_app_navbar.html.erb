@@ -1,0 +1,12 @@
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+    <ul class="uk-navbar-nav">
+      <%= active_li_link_to t('app.subnav.overview'), pages_overview_path(id: app) %>
+      <%= active_li_link_to t('app.subnav.deploy'), pages_deploy_path(id: app) %>
+      <%= active_li_link_to t('app.subnav.metrics'), "#" %>
+      <%= active_li_link_to t('app.subnav.errors'), "#" %>
+      <%= active_li_link_to t('app.subnav.access'), "#" %>
+      <%= active_li_link_to t('app.subnav.settings'), "#" %>
+    </ul>
+  </div>
+</nav>

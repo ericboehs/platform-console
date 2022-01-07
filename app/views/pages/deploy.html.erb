@@ -1,0 +1,70 @@
+<% app = params[:id] %>
+
+<div class="uk-container uk-container-small uk-margin-auto uk-margin-top">
+  <div class="uk-card uk-card-default uk-card-body">
+    <ul class="uk-breadcrumb">
+      <li>
+        <span class="uk-margin-small-right" uk-icon="users"></span>
+        <select class="uk-select uk-width-small">
+          <option>Vets API</option>
+          <option>Release Tools</option>
+          <option>Design System</option>
+        </select>
+      </li>
+      <li>
+        <select class="uk-select uk-width-small">
+          <option><%= app %></option>
+          <option>pghero</option>
+        </select>
+      </li>
+      <li>
+        <select class="uk-select uk-width-small">
+          <option>Development</option>
+          <option>Staging</option>
+          <option>Production</option>
+        </select>
+      </li> </ul>
+
+    <hr>
+
+    <%= render 'shared/app_navbar', app: app %>
+
+
+    <div class='uk-margin'>
+      <a class='uk-button uk-button-default' href="https://github.com">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+            <span class="uk-margin-small-right" uk-icon="github"></span>
+          </div>
+          <div class="uk-width-expand">
+            <h3 class="uk-card-title uk-margin-remove-bottom">GitHub</h3>
+            <p class="uk-text-meta uk-margin-remove-top">Connect to GitHub</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <hr>
+
+    <div class='uk-margin'>
+      <h4 class="uk-h5">Search for a repository to connect to</h4>
+
+      <ul class="uk-breadcrumb">
+        <li>
+          <select class="uk-select uk-width-small">
+            <option>john_doe</option>
+          </select>
+        </li>
+        <li>
+          <form class="uk-search uk-search-default">
+            <a href="https://github.com" class="uk-search-icon-flip" uk-search-icon></a>
+            <input class="uk-search-input" type="search" placeholder="Repository Name">
+          </form>
+        </li>
+      </ul>
+    </div>
+
+  <hr>
+
+  <div class="uk-text-meta uk-text-small">Find me in app/views/pages/deploy.html.erb</div>
+</div>

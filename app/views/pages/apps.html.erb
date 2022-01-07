@@ -1,0 +1,31 @@
+<% apps = ['vets-api', 'pghero', 'feature-flipper', 'file-uploader', 'maintenance-windows'] %>
+
+<div class="uk-container uk-container-small uk-margin-auto uk-margin-top">
+  <div class="uk-card uk-card-default uk-card-body">
+    <h3 class="uk-card-title">Apps</h3>
+    <span class="uk-margin-small-right" uk-icon="users"></span>
+    <select class="uk-select uk-width-small">
+      <option>Vets API</option>
+      <option>Release Tools</option>
+      <option>Design System</option>
+    </select>
+
+    <hr>
+
+    <table class="uk-table uk-table-striped">
+      <tbody>
+        <% apps.each do |app| %>
+          <tr>
+            <td>
+              <%= link_to app, pages_overview_path(id: app) %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <hr>
+
+    <div class="uk-text-meta uk-text-small">Find me in app/views/pages/apps.html.erb</div>
+  </div>
+</div>

@@ -31,11 +31,22 @@
 
 en:
   hello: "Hello world"
+  app:
+    subnav:
+      access: Access
+      deploy: Deploy
+      errors: Errors
+      metrics: Metrics
+      overview: Overview
+      settings: Settings
   nav:
+    apps: Apps
+    docs: Docs
     drop:
-     account: Account
+     account: Account Settings
      log_out: Log Out
      messages: Messages
     get_started: Get Started
     link: Link
     log_in: Log In
+    support: Support

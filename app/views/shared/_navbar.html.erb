@@ -2,10 +2,9 @@
   <% if current_user.present? %>
     <div class="uk-navbar-left">
       <ul class="uk-navbar-nav">
-        <%= active_li_link_to t('nav.link'), root_path %>
-        <%= active_li_link_to t('nav.link'), root_path %>
-        <%= active_li_link_to t('nav.link'), root_path %>
-        <%= active_li_link_to t('nav.link'), root_path %>
+        <%= active_li_link_to t('nav.apps'), apps_path %>
+        <%= active_li_link_to t('nav.docs'), 'https://depo-platform-documentation.scrollhelp.site/developer-docs/index.html' %>
+        <%= active_li_link_to t('nav.support'), 'https://dsva.slack.com/archives/CBU0KDSB1' %>
       </ul>
     </div>
   <% end %>
@@ -21,8 +20,8 @@
           <a href="#"><span uk-icon="icon: user"></span>&nbsp;<%= current_user.name %></a>
           <div uk-dropdown="offset: -10; mode: click">
             <ul class="uk-nav uk-dropdown-nav">
-              <%#= active_li_link_to t('nav.drop.account'), edit_user_path(current_user) %>
-              <%= active_li_link_to t('nav.drop.messages'), root_path %>
+              <%= active_li_link_to t('nav.drop.account'), '#' %>
+              <%= active_li_link_to t('nav.drop.messages'), '#' %>
               <li class="uk-nav-divider"></li>
               <li><%= link_to t('nav.drop.log_out'), logout_path %></li>
             </ul>
