@@ -1,0 +1,46 @@
+<div class="uk-container uk-container-small uk-margin-auto uk-margin-top">
+  <div class="uk-card uk-card-default uk-card-body">
+    <ul class="uk-breadcrumb">
+      <li>
+        <span class="uk-margin-small-right" uk-icon="users"></span>
+        <select class="uk-select uk-width-small selector-relocater">
+          <% Team.all.each do |team| %>
+            <option value="<%= url_for team %>"><%= team.name %></option>
+          <% end %>
+        </select>
+      </li>
+      <li>
+        <select class="uk-select uk-width-small">
+          <option><%= @app.name %></option>
+          <option>pghero</option>
+        </select>
+      </li>
+      <li>
+        <select class="uk-select uk-width-small">
+          <option>Development</option>
+          <option>Staging</option> <option>Production</option>
+        </select>
+      </li>
+    </ul>
+
+    <hr>
+
+    <%= render 'shared/app_navbar', app: @app %>
+  </div>
+</div>
+
+<p style="color: green"><%= notice %></p>
+
+<%= render @app %>
+
+<div>
+  <%= link_to "Edit this app", edit_app_path(@app) %> |
+  <%= link_to "Back to apps", apps_path %>
+
+  <%= button_to "Destroy this app", @app, method: :delete %>
+</div>
+
+<script>
+  // Navigate to the selected value of a <select>'s <option>
+  document.querySelector(".selector-relocater").addEventListener('change', (e) => window.location = e.target.value)
+</script>

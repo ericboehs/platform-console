@@ -1,0 +1,26 @@
+<div class="uk-container uk-container-small uk-margin-auto uk-margin-top">
+  <div class="uk-card uk-card-default uk-card-body">
+    <%= notice %>
+
+    <h1 class="uk-card-title">Apps</h1>
+    <span class="uk-margin-small-right" uk-icon="users"></span>
+    <select class="uk-select uk-width-small">
+      <option>Vets API</option>
+      <option>Release Tools</option>
+      <option>Design System</option>
+    </select>
+
+    <%= link_to '', new_app_path, class: 'uk-button uk-button-primary uk-float-right', 'uk-icon': 'plus' %>
+
+    <hr>
+
+    <table class="uk-table uk-table-striped">
+      <tbody>
+        <% @apps.each do |app| %>
+          <%= render app %>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
